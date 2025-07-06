@@ -71,7 +71,6 @@ def result(board, action):
     return copy_board
 
 
-
 def winner(board):
     """
     Returns the winner of the game, if there is one.
@@ -113,7 +112,7 @@ def utility(board):
     if winner(board) == X:
         return -1
     elif winner(board) == O:
-        return -1
+        return 1
     else:
         return 0
 
