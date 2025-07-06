@@ -110,9 +110,9 @@ def utility(board):
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
     if winner(board) == X:
-        return -1
-    elif winner(board) == O:
         return 1
+    elif winner(board) == O:
+        return -1
     else:
         return 0
 
@@ -131,6 +131,7 @@ def minimax(board):
             value, move = min_value(board)
             return move
 
+
 def min_value(board):
     if (terminal(board)):
         return utility(board), None
@@ -147,6 +148,7 @@ def min_value(board):
                 return v, best_move
 
     return v, best_move
+
 
 def max_value(board):
     if (terminal(board)):
